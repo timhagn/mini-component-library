@@ -49,7 +49,14 @@ const InnerInput = styled.input`
   }
 `;
 
-const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
+const IconInput = ({
+  label,
+  icon,
+  width = 250,
+  size,
+  placeholder,
+  className,
+}) => {
   const inputRef = useRef();
   const currentSize = size === "small" ? 16 : 24;
   const currentSizeRem = currentSize / 16;
@@ -78,6 +85,7 @@ const IconInput = ({ label, icon, width = 250, size, placeholder }) => {
         autoComplete="true"
         placeholder={placeholder}
         type="text"
+        className={className}
         ref={inputRef}
       />
     </IconInputWrapper>
