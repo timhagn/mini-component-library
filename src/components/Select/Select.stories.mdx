@@ -6,7 +6,7 @@ import Select from './Select';
 # Select
 
 export const ManagedSelect = () => {
-  const [value, setValue] = React.useState('newest');
+  const [value, setValue] = React.useState('');
   return (
     <>
       <label
@@ -25,6 +25,7 @@ export const ManagedSelect = () => {
         onChange={(ev) => setValue(ev.target.value)}
       >
         <option value="newest">Newest Releases</option>
+        <option value="long">Really long selected option!</option>
         <option value="price">Price</option>
         <option value="curated">Curated</option>
       </Select>
